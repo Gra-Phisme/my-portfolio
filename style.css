@@ -78,3 +78,75 @@ h2 { font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--accent); text-transf
     .wide, .full { grid-column: span 1; }
     h1 { font-size: 3rem; }
 }
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes pour un look pro */
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.work-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    padding: 1.2rem;
+    border: 1px solid rgba(0, 255, 204, 0.1);
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    background: rgba(0, 255, 204, 0.05);
+    border-color: var(--accent);
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.work-header h4 {
+    color: var(--accent);
+    font-size: 1rem;
+    max-width: 70%;
+}
+
+.work-date {
+    font-size: 0.75rem;
+    color: #888;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.work-location {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ccc;
+}
+
+.work-details {
+    list-style: none;
+    padding: 0;
+}
+
+.work-details li {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 5px;
+    padding-left: 12px;
+    position: relative;
+}
+
+.work-details li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    .work-grid { grid-template-columns: 1fr; }
+}
