@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boulouh Belkis Loudjaine | Mining Engineer</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- 1. La bibliothèque Three.js principale -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- 2. ACTIVATION DES MODULES 3D (À AJOUTER ICI) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <!-- Chargeurs 3D -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+
+<!-- NOUVEAU : Chargeur IFC -->
+<!-- <script src="https://unpkg.com/web-ifc-three@0.0.126/IFCLoader.js"></script> -->
+    
+    <!-- 3. Icônes Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -29,7 +44,25 @@
 
         <!-- BENTO GRID -->
         <div class="bento-container">
-            
+            <!-- SECTION: LEAPFROG 3D MODEL PROJECT -->
+<section class="bento-item full">
+    <i data-lucide="layers"></i>
+    <h2>3D Geological & Lithological Model (Leapfrog Geo)</h2>
+    <p style="margin-bottom: 1rem; color: #aaa;">
+        Implicit geological modeling using drillhole data to establish surface chronologies and intrusive contact boundaries.
+    </p>
+    
+    <div class="model-container">
+        <div id="leapfrog-canvas-container"></div>
+        
+        <div class="model-legend">
+            <h4>Lithology / Units</h4>
+            <div class="legend-item"><span class="dot qfp"></span> QFP (Quartz Feldspar Porphyry)</div>
+            <div class="legend-item"><span class="dot and"></span> AND (Andesite Sequence)</div>
+            <div class="legend-item"><span class="dot bas"></span> BAS (Basalt Deposit)</div>
+        </div>
+    </div>
+</section>
             <!-- SECTION: EDUCATION -->
             <section class="bento-item wide">
                 <i data-lucide="graduation-cap"></i>
